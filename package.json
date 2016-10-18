@@ -1,0 +1,30 @@
+{
+  "name": "node-app-client",
+  "description": "node-app-client: Socket client for remote interaction with application server",
+  "version": "1.0.1",
+  "author": {
+    "name": "Matt Johnson",
+    "email": "mdj1979@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mcmlxxix/node-app-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mcmlxxix/node-app-client/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/mcmlxxix/node-app-client/LICENSE-MIT"
+    }
+  ],
+  "main": "./node-app-client",
+  "keywords": [
+    "utility",
+    "json",
+    "jpath",
+    "database",
+    "objects"
+  ]
+}
