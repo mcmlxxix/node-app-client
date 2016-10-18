@@ -66,6 +66,12 @@ function Request(oper,app,db,data,lock) {
 	this.lock = lock;
 }
 
+function getPath(path) {
+	if(path instanceof Array)
+		return path;
+	return [{path:path}];
+}
+
 /* request handler */
 function handleRequest(callback,request,persist) {
 	request.qid = this.counter++;
@@ -126,22 +132,22 @@ function auth(user,pass) {
 	return new Request(oper.AUTH,undefined,undefined,{name:user,pass:hash});
 }
 function lockTransaction(db,path,lockType) {
-	return new Request(oper.LOCK,this.app,db,[{path:path}],lockType);
+	return new Request(oper.LOCK,this.app,db,getPath(path),lockType);
 }
 function unlockTransaction(db,path) {
-	return new Request(oper.UNLOCK,this.app,db,[{path:path}]);
+	return new Request(oper.UNLOCK,this.app,db,getPath(path));
 }
 function read(db,path) {
-	return new Request(oper.READ,this.app,db,[{path:path}]);
+	return new Request(oper.READ,this.app,db,getPath(path));
 }
 function write(db,path,data) {
 	return new Request(oper.WRITE,this.app,db,data);
 }
 function subscribe(db,path) {
-	return new Request(oper.SUBSCRIBE,this.app,db,[{path:path}]);
+	return new Request(oper.SUBSCRIBE,this.app,db,getPath(path));
 }
 function unsubscribe(db,path) {
-	return new Request(oper.UNSUBSCRIBE,this.app,db,[{path:path}]);
+	return new Request(oper.UNSUBSCRIBE,this.app,db,getPath(path));
 }
 
 /* initialization */
