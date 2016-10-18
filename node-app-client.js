@@ -123,7 +123,7 @@ function disconnect() {
 /* server functions */
 function auth(user,pass) {
 	var hash = crypto.createHash('md5').update(pass).digest('hex');
-	return new Request(oper.AUTH,undefined,{name:user,pass:hash});
+	return new Request(oper.AUTH,undefined,undefined,{name:user,pass:hash});
 }
 function lockTransaction(db,path,lockType) {
 	return new Request(oper.LOCK,this.app,db,[{path:path}],lockType);
