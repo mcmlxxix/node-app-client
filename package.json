@@ -1,7 +1,7 @@
 {
   "name": "node-app-client",
   "description": "node-app-client: Socket client for remote interaction with application server",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": {
     "name": "Matt Johnson",
     "email": "mdj1979@gmail.com"
