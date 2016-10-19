@@ -59,7 +59,7 @@ Socket client for use with [node-app-srv](https://github.com/mcmlxxix/node-app-s
 	
 ## JPath integration
 
-	[node-jpath](https://github.com/mcmlxxix/node-jpath) allows for xpath-style queries in a JSON environment. 
+[node-jpath](https://github.com/mcmlxxix/node-jpath) allows for xpath-style queries in a JSON environment. 
 	
 # Examples
 
@@ -69,8 +69,8 @@ Socket client for use with [node-app-srv](https://github.com/mcmlxxix/node-app-s
 	/* return all records with child 'property' containing a child 'value' > 10 */
 	appClient.read(callback,db,"*.property[value>10]");
 	
-	/* see [node-jpath](https://github.com/mcmlxxix/node-jpath) for more examples */
 
+See [node-jpath](https://github.com/mcmlxxix/node-jpath) for more examples
 
 
 
